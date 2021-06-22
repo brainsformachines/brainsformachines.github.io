@@ -10,7 +10,7 @@ redirect_from: "/sbc/odroid_xu4"
 
 #### Processor
 
-- CPU: **Exynos 5422**
+- CPU: [Exynos 5422](exynos_5422)
 - Architecture: **ARM**
 
 ![Exynos 5422 structure](https://wiki.odroid.com/lib/exe/fetch.php?w=900&tok=effd4c&media=https%3A%2F%2Fdn.odroid.com%2Fhomebackup%2F201506191222574523.png)
