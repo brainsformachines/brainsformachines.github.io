@@ -40,6 +40,28 @@ Board schematics rev 2.0 [PDF](https://dn.odroid.com/5422/ODROID-XU4/Schematics/
 
 #### Connectors
 
+GPIO DC Electrical Characteristics (VDD = 1.80V)
+
+| Parameter 	                 | Min 	     | Max 	    | Unit |
+| ------------------------------ | --------- | -------- | ---- |
+| Vih (High-level input voltage) | 	0.7 x VDD| 	VDD+0.2 |	V  |
+| Vil (Low-level input voltage)  | -0.2 	 | 0.3 x VDD| 	V  |
+| dV (Hysteresis voltage) 	     | 0.15 	 |	        |   V  |
+
+#### Serial Console Port (UART)
+
+```
+_____UART____
+|Pin 4 - GND|
+|Pin 3 - RXD|
+|Pin 2 - TXD|
+|Pin 1 - VCC|
+\___________|
+
+1.8V LVTTL interface
+Pin 1 : 1.8Volt output from XU4 board for the reference voltage for USB-UART board.
+```
+
 ##### CON 10 - 30pin GPIO header - 2x15 pins
 
 | Default  Pin State |	GPIO & Export No |	Net Name |	Pin Number | Pin Number |	Net Name |	GPIO & Export No |	Default Pin State |
@@ -60,9 +82,31 @@ Board schematics rev 2.0 [PDF](https://dn.odroid.com/5422/ODROID-XU4/Schematics/
 | I(PUDN) 	         | GPX3.1 (#33) 	 | XE.INT25  | 	27 	       | 28 	    | GND 	     | - 	             | -                  |
 | - 	             | - 	             | VDD_IO(1.8V)|  	29 	   | 30 	    | GND 	     | - 	             | -                  |
 
+##### CON 11 - 12pin GPIO Header - 2x6 pins
+
+| Default Pin State |	GPIO & Export No |	Net Name |	Pin Number | Pin Number |	Net Name | GPIO & Export No  |	Default Pin State |
+| :---------------: | :----------------: | :-------: | :---------: | :--------: | :--------: | :---------------: | :----------------: |
+| - 	            | - 	             | 5V0 	     | 1 	       | 2 	        | GND 	     | - 	             | -                  |
+| - 	            | - 	             | VDD_IO(1.8V)|  	3 	   | 4 	        | I2C_5.SDA  | 	GPA2.2 (#187) 	 | I(PUDN)            |
+| I(PUDN) 	        | GPX3.2 (#34) 	     | XE.INT26  | 5 	       | 6 	        | I2C_5.SCL  | 	GPA2.3 (#188) 	 | I(PUDN)            |
+| I(PUDN) 	        | GPZ.0 (#225) 	     | I2S_0.SCLK| 7 	       | 8 	        | GND 	     | -                 | -                  |
+| I(PUDN) 	        | GPZ.1 (#226) 	     | I2S_0.CDCLK|  	9 	   | 10 	    | I2S_0.SDO  | 	GPZ.4 (#229) 	 | I(PUDN)            |
+| I(PUDN) 	        | GPZ.2 (#227) 	     | I2S_0.LRCK|  	11 	   | 12 	    | I2S_0.SDI  | 	GPZ.3 (#228) 	 | I(PUDN)            |
+
+### Software
+
+#### Linux Images
+
+- Latest Ubuntu 18.04.3 Official [images](https://odroid.in/ubuntu_18.04lts/XU3_XU4_MC1_HC1_HC2/) ([download](https://odroid.in/ubuntu_18.04lts/XU3_XU4_MC1_HC1_HC2/ubuntu-18.04.3-4.14-mate-odroid-xu4-20190929.img.xz),[MD5SUM](https://odroid.in/ubuntu_18.04lts/XU3_XU4_MC1_HC1_HC2/ubuntu-18.04.3-4.14-mate-odroid-xu4-20190929.img.md5sum))
+- [Armbian](armbian) Images:
+  - Ubuntu 20.04 based Armbian Focal ([torrent](https://redirect.armbian.com/odroidxu4/Focal_legacy_xfce.torrent))
+  - Debian 10 based Armbian Buster ([torrent](https://redirect.armbian.com/odroidxu4/Buster_legacy.torrent))
+
 ### References
 
 1. [ODROID Wiki - Odroid XU4](https://wiki.odroid.com/odroid-xu4/odroid-xu4)
-2. [Hardkernel Official Web Site \| ODROID](https://www.hardkernel.com)
+2. [Hardkernel Official Web Site - ODROID](https://www.hardkernel.com)
 3. [ODROID XU4 Schematics](https://dn.odroid.com/5422/ODROID-XU4/Schematics/)
 4. [ODROID Wiki - Expansion Connectors](https://wiki.odroid.com/odroid-xu4/hardware/expansion_connectors)
+5. [Odroid XU4 - Armbian](https://www.armbian.com/odroid-xu4/)
+6. [ODROID Wiki - Hardware](https://wiki.odroid.com/odroid-xu4/hardware/hardware)
