@@ -1,7 +1,7 @@
 # (string) Title of your wiki
 title: Brainsformachines
 # (string) Description of your wiki
-description: This wiki contains information about electronics and software to control robots.
+description: This wiki contains information about electronics and software for control systems and robots.
 # (boolean) Enable/disable wiki page list in sidebar
 show_wiki_pages: true
 # (integer) Maximum number of wiki page to shown in sidebar
