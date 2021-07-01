@@ -10,6 +10,17 @@ Orange Pi One is a open-source single board computer. It uses the AllWinner H3 S
 
 ### Features
 
+| Processor  | [H3](h3) Quad-core Cortex-A7 H.265/HEVC 4K |
+| ---------- | ------------------------------------------ |
+| GPU        | Mali400MP2 GPU@600MHz                     |
+| SDRAM      | 512MB/1GB DDR3 (shared with GPU)           |
+| Storage    | TF card (Max. 32GB) / MMC card slot        |
+| Network    | 10/100M Ethernet RJ45                      |
+| Video Input| CSI input connector Camera (8-bit YUV422 CMOS, CCIR656 protocol for NTSC and PAL, 5M pixel, 1080p@30fps)|
+| Video Outputs| HDMI                                     |
+| Power Source| DC input                                  |
+| Connectors | 1xUSB 2.0 HOST, 1xUSB 2.0 OTG, 40 Pins Header|
+
 ### Hardware
 
 #### Board Layout
